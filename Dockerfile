@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 ENV OS_TYPE=x86_64
 ENV PY_VER=py39_4.11.0
 
+# add a non-root user
 RUN useradd --no-log-init -r -m -g staff condauser
 
 RUN apt update -y && apt install -y wget
